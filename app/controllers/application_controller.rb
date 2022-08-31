@@ -6,7 +6,6 @@ class ApplicationController < ActionController::API
     private
 
     def render_invalid_record_response(invalid)
-        byebug
         render json: {errors: invalid.record.errors.full_messages}, status: :unprocessable_entity
     end
 
